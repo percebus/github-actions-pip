@@ -36,11 +36,13 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
+      max-parallel: 6
       matrix:
         python_version:
-          - 3.10
-          - 3.11
-          - 3.12
+          - "3.10"
+          - "3.11"
+          - "3.12"
 
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
@@ -64,6 +66,8 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
+      max-parallel: 6
       matrix:
         requirements_file:
           - requirements.txt
