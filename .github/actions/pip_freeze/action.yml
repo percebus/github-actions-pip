@@ -17,4 +17,6 @@ runs:
   steps:
     - name: pip freeze > ${{ inputs.requirements_file }}
       shell: bash
-      run: pip freeze > ${{ inputs.requirements_file }}
+      run: |
+        pip freeze
+        pip freeze > ${{ inputs.requirements_file }}

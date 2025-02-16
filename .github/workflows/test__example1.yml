@@ -33,6 +33,7 @@ jobs:
       - uses: ./.github/actions/pip_freeze
 
   python__matrix:
+    needs: default
     runs-on: ubuntu-latest
 
     strategy:
@@ -63,6 +64,7 @@ jobs:
       - uses: ./.github/actions/pip_freeze
 
   requirements_file__matrix:
+    needs: default
     runs-on: ubuntu-latest
 
     strategy:
