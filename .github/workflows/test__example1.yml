@@ -45,6 +45,7 @@ jobs:
           - "3.11"
           - "3.12"
 
+    name: python @ ${{ matrix.python_version }}
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
 
@@ -76,6 +77,7 @@ jobs:
           - requirements.dev.txt
           - requirements.release.txt
 
+    name: "-r ${{ matrix.requirements_file }}"
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
 
