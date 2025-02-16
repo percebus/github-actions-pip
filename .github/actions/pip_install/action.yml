@@ -1,0 +1,30 @@
+name: pip install
+description: Upgrade pip packages
+
+inputs:
+  pip_cli_options:
+    description: Options to pass to the pip command
+    required: false
+    default: "--verbose"
+
+  requirements_file:
+    description: Path to the requirements file
+    required: false
+    default: requirements.txt
+
+  package:
+    description: Install a package
+    required: false
+    default: "false"
+
+runs:
+  using: "composite"
+  steps:
+    - name: pip install -r ${{ inputs.requirements_file }}
+      shell: bash
+      run: pip install ${{ inputs.pip_cli_options }} --requirement ${{ inputs.requirements_file }}
+
+    - name: pip install .
+      shell: bash
+      if: ${{ inputs.package == 'true' }}
+      run: pip install ${{ inputs.pip_cli_options }} .
