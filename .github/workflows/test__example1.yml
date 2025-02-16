@@ -1,0 +1,89 @@
+name: Test example1
+
+on:
+  push:
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+env:
+  PYTHON_VERSION: 3.13
+
+  WORKING_DIRECTORY: assets/example1
+
+jobs:
+  default:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+
+      # FIXME get from github-actions-python
+      - name: python @ ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - uses: ./.github/actions/pip_install_upgrade
+        with:
+          requirements_file: ""
+
+      - uses: ./.github/actions/pip_install
+        with:
+          requirements_file: ${{ env.WORKING_DIRECTORY }}/requirements.txt
+
+      - uses: ./.github/actions/pip_freeze
+
+  python__matrix:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python_version:
+          - 3.10
+          - 3.11
+          - 3.12
+
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+
+      - name: python @ ${{ matrix.python_version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python_version }}
+
+      - uses: ./.github/actions/pip_install_upgrade
+        with:
+          requirements_file: ""
+
+      - uses: ./.github/actions/pip_install
+        with:
+          requirements_file: ${{ env.WORKING_DIRECTORY }}/requirements.txt
+
+      - uses: ./.github/actions/pip_freeze
+
+  requirements_file__matrix:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        requirements_file:
+          - requirements.txt
+          - requirements.dev.txt
+          - requirements.release.txt
+
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+
+      - name: python @ ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - uses: ./.github/actions/pip_install_upgrade
+        with:
+          requirements_file: ""
+
+      - uses: ./.github/actions/pip_install
+        with:
+          requirements_file: ${{ env.WORKING_DIRECTORY }}/${{ matrix.requirements_file }}
+
+      - uses: ./.github/actions/pip_freeze

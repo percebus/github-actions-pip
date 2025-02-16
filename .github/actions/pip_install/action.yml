@@ -10,7 +10,7 @@ inputs:
   requirements_file:
     description: Path to the requirements file
     required: false
-    default: requirements.txt
+    default: ./requirements.txt
 
   package:
     description: Install a package
@@ -18,7 +18,7 @@ inputs:
     default: "false"
 
 runs:
-  using: "composite"
+  using: composite
   steps:
     - name: pip install -r ${{ inputs.requirements_file }}
       shell: bash

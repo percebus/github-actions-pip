@@ -10,10 +10,10 @@ inputs:
   requirements_file:
     description: Path to the requirements file
     required: false
-    default: requirements.upgrade.txt
+    default: ./requirements.upgrade.txt
 
 runs:
-  using: "composite"
+  using: composite
   steps:
     - name: pip upgrade pip
       shell: bash
