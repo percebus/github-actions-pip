@@ -1,5 +1,9 @@
 # github-actions-pip
 
+[`LICENSE`](./LICENSE.md)
+
+[![[C]ontinuous [I]ntegration](https://github.com/percebus/github-actions-pip/actions/workflows/always.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/always.yml)
+
 github re-usable actions &amp; workflows for pip
 
 ## GitHub
