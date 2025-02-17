@@ -7,7 +7,7 @@ inputs:
     required: false
     default: "--verbose"
 
-  requirements_file:
+  requirements-file:
     description: Path to the requirements file
     required: false
     default: ./requirements.frozen.txt
@@ -15,8 +15,8 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: pip freeze > ${{ inputs.requirements_file }}
+    - name: pip freeze > ${{ inputs.requirements-file }}
       shell: bash
       run: |
         pip freeze
-        pip freeze > ${{ inputs.requirements_file }}
+        pip freeze > ${{ inputs.requirements-file }}

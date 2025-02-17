@@ -7,7 +7,7 @@ inputs:
     required: false
     default: "--verbose"
 
-  requirements_file:
+  requirements-file:
     description: Path to the requirements file
     required: false
     default: ./requirements.txt
@@ -20,9 +20,9 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: pip install -r ${{ inputs.requirements_file }}
+    - name: pip install -r ${{ inputs.requirements-file }}
       shell: bash
-      run: pip install ${{ inputs.pip_cli_options }} --requirement ${{ inputs.requirements_file }}
+      run: pip install ${{ inputs.pip_cli_options }} --requirement ${{ inputs.requirements-file }}
 
     - name: pip install .
       shell: bash
