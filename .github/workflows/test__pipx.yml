@@ -16,6 +16,8 @@ jobs:
       - uses: percebus/github-actions-python/.github/actions/python_setup@main
 
       - uses: ./.github/actions/pip_install_upgrade
+        with:
+          requirements-file: ${{ env.WORKING_DIRECTORY }}/requirements.upgrade.txt
 
       - uses: ./.github/actions/pip_install
         with:
