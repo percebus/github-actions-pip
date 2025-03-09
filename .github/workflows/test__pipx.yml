@@ -1,0 +1,28 @@
+name: Test pipx
+
+on:
+  push:
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+env:
+  WORKING_DIRECTORY: ./assets/examples/pipx
+
+jobs:
+  default:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: percebus/github-actions-python/.github/actions/python_setup@main
+
+      - uses: ./.github/actions/pip_install_upgrade
+
+      - uses: ./.github/actions/pip_install
+        with:
+          # empty
+          requirements-file: ${{ env.WORKING_DIRECTORY }}/requirements.txt
+
+      - uses: ./.github/actions/pip_freeze
+
+      - name: pipx --version
+        run: pipx --version

@@ -20,6 +20,7 @@ github re-usable actions &amp; workflows for pip
 
 #### Tests
 
-| workflow                                           | details                       |
-| -------------------------------------------------- | ----------------------------- |
-| [example1](./.github/workflows/test__example1.yml) | [example1](./assets/example1) |
+| workflow                                           | details                                |
+| -------------------------------------------------- | -------------------------------------- |
+| [example1](./.github/workflows/test__example1.yml) | [example1](./assets/examples/example1) |
+| [pipx](./.github/workflows/test__pipx.yml)         | [pipx](./assets/examples/pipx)         |
