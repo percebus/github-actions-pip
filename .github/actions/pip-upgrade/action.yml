@@ -1,5 +1,5 @@
-name: pip install --upgrade
-description: Upgrade pip packages
+name: pip-upgrade
+description: pip install --upgrade
 
 inputs:
   pip_cli_options:

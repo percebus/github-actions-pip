@@ -13,9 +13,9 @@ jobs:
 
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
-      - uses: percebus/github-actions-python/.github/actions/python_setup@main
+      - uses: percebus/github-actions-python/.github/actions/setup@main
 
-      - uses: ./.github/actions/pip_install_upgrade
+      - uses: ./.github/actions/pip-upgrade
         with:
           requirements-file: ""
 
@@ -41,11 +41,11 @@ jobs:
     name: python @ ${{ matrix.python-version }}
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
-      - uses: percebus/github-actions-python/.github/actions/python_setup@main
+      - uses: percebus/github-actions-python/.github/actions/setup@main
         with:
           python-version: ${{ matrix.python-version }}
 
-      - uses: ./.github/actions/pip_install_upgrade
+      - uses: ./.github/actions/pip-upgrade
         with:
           requirements-file: ""
 
@@ -71,9 +71,9 @@ jobs:
     name: "-r ${{ matrix.requirements-file }}"
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
-      - uses: percebus/github-actions-python/.github/actions/python_setup@main
+      - uses: percebus/github-actions-python/.github/actions/setup@main
 
-      - uses: ./.github/actions/pip_install_upgrade
+      - uses: ./.github/actions/pip-upgrade
         with:
           requirements-file: ""
 

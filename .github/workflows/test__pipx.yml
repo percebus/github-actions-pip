@@ -13,9 +13,9 @@ jobs:
 
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
-      - uses: percebus/github-actions-python/.github/actions/python_setup@main
+      - uses: percebus/github-actions-python/.github/actions/setup@main
 
-      - uses: ./.github/actions/pip_install_upgrade
+      - uses: ./.github/actions/pip-upgrade
         with:
           requirements-file: ${{ env.WORKING_DIRECTORY }}/requirements.upgrade.txt
 
