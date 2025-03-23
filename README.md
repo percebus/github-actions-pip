@@ -20,7 +20,7 @@ github re-usable actions &amp; workflows for pip
 
 #### Tests
 
-| workflow                                           | details                                |
-| -------------------------------------------------- | -------------------------------------- |
-| [example1](./.github/workflows/test__example1.yml) | [example1](./assets/examples/example1) |
-| [pipx](./.github/workflows/test__pipx.yml)         | [pipx](./assets/examples/pipx)         |
+| workflow                                           | details                                | test                                                                                                                                                                                                   |
+| -------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [example1](./.github/workflows/test__example1.yml) | [example1](./assets/examples/example1) | [![Test example1](https://github.com/percebus/github-actions-pip/actions/workflows/test__example1.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/test__example1.yml) |
+| [pipx](./.github/workflows/test__pipx.yml)         | [pipx](./assets/examples/pipx)         | [![Test pipx](https://github.com/percebus/github-actions-pip/actions/workflows/test__pipx.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/test__pipx.yml)             |
