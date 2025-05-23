@@ -15,15 +15,15 @@ jobs:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
       - uses: percebus/github-actions-python/.github/actions/setup@main
 
-      - uses: ./.github/actions/pip-upgrade
+      - uses: ./.github/actions/install-upgrade
         with:
           requirements-file: ""
 
-      - uses: ./.github/actions/pip_install
+      - uses: ./.github/actions/install
         with:
           requirements-file: ${{ env.WORKING_DIRECTORY }}/requirements.txt
 
-      - uses: ./.github/actions/pip_freeze
+      - uses: ./.github/actions/freeze
 
   python__matrix:
     needs: default
@@ -45,15 +45,15 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - uses: ./.github/actions/pip-upgrade
+      - uses: ./.github/actions/install-upgrade
         with:
           requirements-file: ""
 
-      - uses: ./.github/actions/pip_install
+      - uses: ./.github/actions/install
         with:
           requirements-file: ${{ env.WORKING_DIRECTORY }}/requirements.txt
 
-      - uses: ./.github/actions/pip_freeze
+      - uses: ./.github/actions/freeze
 
   requirements-file__matrix:
     needs: default
@@ -73,12 +73,12 @@ jobs:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
       - uses: percebus/github-actions-python/.github/actions/setup@main
 
-      - uses: ./.github/actions/pip-upgrade
+      - uses: ./.github/actions/install-upgrade
         with:
           requirements-file: ""
 
-      - uses: ./.github/actions/pip_install
+      - uses: ./.github/actions/install
         with:
           requirements-file: ${{ env.WORKING_DIRECTORY }}/${{ matrix.requirements-file }}
 
-      - uses: ./.github/actions/pip_freeze
+      - uses: ./.github/actions/freeze
