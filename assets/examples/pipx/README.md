@@ -1,6 +1,6 @@
 # pipx
 
-A typical basic python stuff
+Upgrade `pipx` to latest
 
 ## requirements
 
