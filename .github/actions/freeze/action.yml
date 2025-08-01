@@ -2,10 +2,11 @@ name: pip freeze
 description: Freeze pip packages
 
 inputs:
+  # i.e. --verbose, --no-cache-dir, etc.
   pip_cli_options:
     description: Options to pass to the pip command
     required: false
-    default: "--verbose"
+    default: ""
 
   requirements-file:
     description: Path to the requirements file
@@ -18,5 +19,5 @@ runs:
     - name: pip freeze > ${{ inputs.requirements-file }}
       shell: bash
       run: |
-        pip freeze
+        pip freeze ${ { inputs.pip_cli_options } }
         pip freeze > ${{ inputs.requirements-file }}
