@@ -38,10 +38,10 @@ jobs:
       max-parallel: 6
       matrix:
         python-version:
-          # - "3.10"
+          - "3.10"
           - "3.11"
           - "3.12"
-          - "3.13"
+          # - "3.13"  # Already tested from .python-version
 
     name: python @ ${{ matrix.python-version }}
     steps:
