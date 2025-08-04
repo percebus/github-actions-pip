@@ -10,11 +10,11 @@ github re-usable actions &amp; workflows for pip
 
 ### Actions
 
-| action                                               | test      |
-| ---------------------------------------------------- | --------- |
-| [install-upgrade](./.github/actions/install-upgrade) | See Tests |
-| [install](./.github/actions/install)                 | See Tests |
-| [freeze](./.github/actions/freeze)                   | See Tests |
+| action                                                 | test      |
+| ------------------------------------------------------ | --------- |
+| [`install-upgrade`](./.github/actions/install-upgrade) | See Tests |
+| [`install`](./.github/actions/install)                 | See Tests |
+| [`freeze`](./.github/actions/freeze)                   | See Tests |
 
 ### Workflows
 
@@ -23,4 +23,4 @@ github re-usable actions &amp; workflows for pip
 | workflow                                           | details                                | test                                                                                                                                                                                                   |
 | -------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [example1](./.github/workflows/test__example1.yml) | [example1](./assets/examples/example1) | [![Test example1](https://github.com/percebus/github-actions-pip/actions/workflows/test__example1.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/test__example1.yml) |
-| [pipx](./.github/workflows/test__pipx.yml)         | [pipx](./assets/examples/pipx)         | [![Test pipx](https://github.com/percebus/github-actions-pip/actions/workflows/test__pipx.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/test__pipx.yml)             |
+| [`pipx`](./.github/workflows/test__pipx.yml)       | [pipx](./assets/examples/pipx)         | [![Test pipx](https://github.com/percebus/github-actions-pip/actions/workflows/test__pipx.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/test__pipx.yml)             |
