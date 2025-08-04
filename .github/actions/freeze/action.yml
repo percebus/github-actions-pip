@@ -19,5 +19,5 @@ runs:
     - name: pip freeze > ${{ inputs.requirements-file }}
       shell: bash
       run: |
-        pip freeze ${ { inputs.pip_cli_options } }
-        pip freeze > ${{ inputs.requirements-file }}
+        pip freeze ${{ inputs.pip_cli_options }} > ${{ inputs.requirements-file }}
+        cat ${{ inputs.requirements-file }}
