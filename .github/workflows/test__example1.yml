@@ -38,9 +38,10 @@ jobs:
       max-parallel: 6
       matrix:
         python-version:
-          - "3.10"
+          # - "3.10"
           - "3.11"
           - "3.12"
+          - "3.13"
 
     name: python @ ${{ matrix.python-version }}
     steps:
@@ -51,7 +52,7 @@ jobs:
 
       - uses: ./.github/actions/install-upgrade
         with:
-          requirements-file: ""
+          requirements-file: ${{ env.WORKING_DIRECTORY }}/requirements.upgrade.txt
 
       - uses: ./.github/actions/install
         with:
@@ -79,7 +80,7 @@ jobs:
 
       - uses: ./.github/actions/install-upgrade
         with:
-          requirements-file: ""
+          requirements-file: ${{ env.WORKING_DIRECTORY }}/requirements.upgrade.txt
 
       - uses: ./.github/actions/install
         with:
