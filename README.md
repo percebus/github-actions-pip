@@ -10,11 +10,11 @@ github re-usable actions &amp; workflows for pip
 
 ### Actions
 
-| action                                                   | test      |
-| -------------------------------------------------------- | --------- |
-| [`install``-upgrade`](./.github/actions/install-upgrade) | See Tests |
-| [`install`](./.github/actions/install)                   | See Tests |
-| [`freeze`](./.github/actions/freeze)                     | See Tests |
+| action                                                 | test      |
+| ------------------------------------------------------ | --------- |
+| [`install-upgrade`](./.github/actions/install-upgrade) | See Tests |
+| [`install`](./.github/actions/install)                 | See Tests |
+| [`freeze`](./.github/actions/freeze)                   | See Tests |
 
 ### Workflows
 
