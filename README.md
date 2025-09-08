@@ -1,8 +1,8 @@
 # github-actions-pip
 
-[`LICENSE`](./LICENSE)
+[![[C]ontinuous [I]ntegration](https://github.com/percebus/github-actions-pip/actions/workflows/always.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/always.yml) [![CodeQL](https://github.com/percebus/github-actions-pip/actions/workflows/codeql.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/codeql.yml) [![Pull Request](https://github.com/percebus/github-actions-pip/actions/workflows/pull_request.yml/badge.svg?event=pull_request)](https://github.com/percebus/github-actions-pip/actions/workflows/pull_request.yml)
 
-[![[C]ontinuous [I]ntegration](https://github.com/percebus/github-actions-pip/actions/workflows/always.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/always.yml) [![Pull Request](https://github.com/percebus/github-actions-pip/actions/workflows/pull_request.yml/badge.svg?event=pull_request)](https://github.com/percebus/github-actions-pip/actions/workflows/pull_request.yml)
+[`LICENSE`](./LICENSE)
 
 github re-usable actions &amp; workflows for pip
 
@@ -10,11 +10,11 @@ github re-usable actions &amp; workflows for pip
 
 ### Actions
 
-| action                                                 | test      |
-| ------------------------------------------------------ | --------- |
-| [`install-upgrade`](./.github/actions/install-upgrade) | See Tests |
-| [`install`](./.github/actions/install)                 | See Tests |
-| [`freeze`](./.github/actions/freeze)                   | See Tests |
+| action                                                   | test      |
+| -------------------------------------------------------- | --------- |
+| [`install``-upgrade`](./.github/actions/install-upgrade) | See Tests |
+| [`install`](./.github/actions/install)                   | See Tests |
+| [`freeze`](./.github/actions/freeze)                     | See Tests |
 
 ### Workflows
 
