@@ -3,10 +3,10 @@ name: CodeQL
 # SRC: https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/customizing-your-advanced-setup-for-code-scanning
 on:
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  # push:
+  #   branches: [main]
+  # pull_request:
+  #   branches: [main]
   schedule:
     - cron: "0 0 * * 0" # Weekly on Sundays at midnight
 
