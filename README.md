@@ -24,3 +24,7 @@ github re-usable actions &amp; workflows for pip
 | -------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [example1](./.github/workflows/test__example1.yml) | [example1](./assets/examples/example1) | [![Test example1](https://github.com/percebus/github-actions-pip/actions/workflows/test__example1.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/test__example1.yml) |
 | [`pipx`](./.github/workflows/test__pipx.yml)       | [pipx](./assets/examples/pipx)         | [![Test pipx](https://github.com/percebus/github-actions-pip/actions/workflows/test__pipx.yml/badge.svg)](https://github.com/percebus/github-actions-pip/actions/workflows/test__pipx.yml)             |
+
+## References
+
+- [Customizing your advanced setup for code scanning](https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/customizing-your-advanced-setup-for-code-scanning)
